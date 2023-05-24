@@ -1,10 +1,10 @@
 const { spawn } = require('child_process');
 
-// const backend = spawn('node', ['index.js'], {
-//     cwd: './Backend',
-//     shell: true,
-//     stdio: 'inherit'
-// });
+const backend = spawn('node', ['index.js'], {
+    cwd: './Backend',
+    shell: true,
+    stdio: 'inherit'
+});
 
 const frontend = spawn('npm', ['start'], {
     cwd: './Frontend',
@@ -13,7 +13,7 @@ const frontend = spawn('npm', ['start'], {
 });
 
 process.on('SIGINT', () => {
-    // backend.kill('SIGINT');
+    backend.kill('SIGINT');
     frontend.kill('SIGINT');
     process.exit();
 });
