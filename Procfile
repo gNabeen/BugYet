@@ -1,0 +1,1 @@
+Worker: node install.js && node start.js

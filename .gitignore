@@ -1,0 +1,5 @@
+.DS_Store
+package-lock.json
+Backend/subdomains-archive/
+**/node_modules/
+**/.env
